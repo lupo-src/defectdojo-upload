@@ -13,19 +13,19 @@ class Defectdojo:
 
     def __init__(self):
         # Required Secrets for this awesome code to function.
-        self.defectdojo_api_key = os.environ["INPUT_DEFECTDOJO_API_KEY"]
-        self.defectdojo_username = os.environ["INPUT_DEFECTDOJO_USERNAME"]
-        self.defectdojo_password = os.environ["INPUT_DEFECTDOJO_PASSWORD"]
-        self.defectdojo_service_account = os.environ["INPUT_DEFECTDOJO_SERVICE_ACCOUNT"]
+        self.defectdojo_api_key = os.environ["DEFECTDOJO_API_KEY"]
+        self.defectdojo_username = os.environ["DEFECTDOJO_USERNAME"]
+        self.defectdojo_password = os.environ["DEFECTDOJO_PASSWORD"]
+        self.defectdojo_service_account = os.environ["DEFECTDOJO_SERVICE_ACCOUNT"]
 
         # Required Defectdojo Variables.
-        self.defectdojo_url = os.environ["INPUT_DEFECTDOJO_URL"]
-        self.defectdojo_product_type = os.environ["INPUT_DEFECTDOJO_PRODUCT_TYPE"]
-        self.defectdojo_product = os.environ["INPUT_DEFECTDOJO_PRODUCT"]
-        self.defectdojo_environment_type = os.environ["INPUT_DEFECTDOJO_ENVIRONMENT_TYPE"]
-        self.defectdojo_scan_type = os.environ["INPUT_DEFECTDOJO_SCAN_TYPE"]
-        self.defectdojo_engagement_name = os.environ["INPUT_DEFECTDOJO_ENGAGEMENT_NAME"]
-        self.scan_results_file_path = os.environ["INPUT_RESULTS_FILE_PATH"]
+        self.defectdojo_url = os.environ["DEFECTDOJO_URL"]
+        self.defectdojo_product_type = os.environ["DEFECTDOJO_PRODUCT_TYPE"]
+        self.defectdojo_product = os.environ["DEFECTDOJO_PRODUCT"]
+        self.defectdojo_environment_type = os.environ["DEFECTDOJO_ENVIRONMENT_TYPE"]
+        self.defectdojo_scan_type = os.environ["DEFECTDOJO_SCAN_TYPE"]
+        self.defectdojo_engagement_name = os.environ["DEFECTDOJO_ENGAGEMENT_NAME"]
+        self.scan_results_file_path = os.environ["RESULTS_FILE_PATH"]
 
     def import_scan_results_to_defectdojo(
         self,
