@@ -1,0 +1,50 @@
+name: "Defectdojo Upload"
+author: "Adeniji Idris (Alvacoder)"
+description: "A github action that sends scan reports to a DefectDojo instance with support for multiple authentication methods"
+branding:
+  icon: 'code'  
+  color: 'green'
+inputs:
+  defectdojo_url:
+    description: the url of your defectdojo instance
+    required: true
+  defectdojo_username:
+    description: the username to login into your defectdojo instance if using basic authentication
+    required: false
+  defectdojo_password:
+    description: the password to login into your defectdojo instance if using basic authentication
+    required: false
+  defectdojo_api_key:
+    description: the API key to authenticate with your defectdojo instance if using API key authentication
+    required: false
+  defectdojo_product_type:
+    description: the defectdojo product type that the scan result relates to
+    required: true
+  defectdojo_product:
+    description: the defectdojo product that the scan result relates to
+    required: true
+  defectdojo_environment_type:
+    description: the defectdojo environment type that the scan result relates to
+    required: true
+  defectdojo_scan_type:
+    description: the defectdojo scan type that the scan result relates to
+    required: true
+  defectdojo_engagement_name:
+    description: the defectdojo engagement name that the scan result relates to
+    required: true
+  scan_results_file_name:
+    description: the file name of the scan result to be uploaded
+    required: true
+  client_certificate_file_path:
+    description: the file path for a client side certificate if required
+    required: false
+  client_key_file-path:
+    description: the file path for a client side private key if required
+    required: false
+# outputs:
+    # defectdojo-report-id:
+    # description: the id of the defectdojo report that was created
+    # value: ${{ steps.import_scan_results.outputs.defectdojo-report-id }}
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

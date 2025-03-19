@@ -13,13 +13,12 @@ class Defectdojo:
 
     def __init__(self):
         # Required Secrets for this awesome code to function.
-        self.github_token = os.environ["INPUT_GITHUB_PERSONAL_TOKEN"]
-
-        # Required Defectdojo Variables.
         self.defectdojo_api_key = os.environ["INPUT_DEFECTDOJO_API_KEY"]
         self.defectdojo_username = os.environ["INPUT_DEFECTDOJO_USERNAME"]
         self.defectdojo_password = os.environ["INPUT_DEFECTDOJO_PASSWORD"]
         self.defectdojo_service_account = os.environ["INPUT_DEFECTDOJO_SERVICE_ACCOUNT"]
+
+        # Required Defectdojo Variables.
         self.defectdojo_url = os.environ["INPUT_DEFECTDOJO_URL"]
         self.defectdojo_product_type = os.environ["INPUT_DEFECTDOJO_PRODUCT_TYPE"]
         self.defectdojo_product = os.environ["INPUT_DEFECTDOJO_PRODUCT"]
