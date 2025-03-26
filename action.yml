@@ -48,3 +48,15 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  env:
+    DEFECTDOJO_API_KEY: ${{ inputs.defectdojo_api_key }}
+    DEFECTDOJO_USERNAME: ${{ inputs.defectdojo_username }}
+    DEFECTDOJO_PASSWORD: ${{ inputs.defectdojo_password }}
+    DEFECTDOJO_SERVICE_ACCOUNT: ${{ inputs.defectdojo_service_account }}
+    DEFECTDOJO_URL: ${{ inputs.defectdojo_url }}
+    DEFECTDOJO_PRODUCT_TYPE: ${{ inputs.defectdojo_product_type }}
+    DEFECTDOJO_PRODUCT: ${{ inputs.defectdojo_product }}
+    DEFECTDOJO_ENVIRONMENT_TYPE: ${{ inputs.defectdojo_environment_type }}
+    DEFECTDOJO_SCAN_TYPE: ${{ inputs.defectdojo_scan_type }}
+    DEFECTDOJO_ENGAGEMENT_NAME: ${{ inputs.defectdojo_engagement_name }}
+    RESULTS_FILE_PATH: ${{ inputs.scan_results_file_name }}
