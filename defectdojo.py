@@ -28,7 +28,7 @@ class Defectdojo:
         self.scan_results_file_path = get_env_var("RESULTS_FILE_PATH")
 
     def get_env_var(name):
-    return os.environ.get(f"INPUT_{name}") or os.environ.get(name)
+        return os.environ.get(f"INPUT_{name}") or os.environ.get(name)
 
     def import_scan_results_to_defectdojo(
         self,
