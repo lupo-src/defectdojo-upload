@@ -9,6 +9,9 @@ import os
 import sys
 import logging
 
+def get_env_var(name):
+    return os.environ.get(f"INPUT_{name}") or os.environ.get(name)
+
 class Defectdojo:
 
     def __init__(self):
@@ -26,9 +29,6 @@ class Defectdojo:
         self.defectdojo_scan_type = get_env_var("DEFECTDOJO_SCAN_TYPE")
         self.defectdojo_engagement_name = get_env_var("DEFECTDOJO_ENGAGEMENT_NAME")
         self.scan_results_file_path = get_env_var("RESULTS_FILE_PATH")
-
-    def get_env_var(name):
-        return os.environ.get(f"INPUT_{name}") or os.environ.get(name)
 
     def import_scan_results_to_defectdojo(
         self,
