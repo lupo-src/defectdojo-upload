@@ -19,7 +19,7 @@ class Defectdojo:
         self.defectdojo_api_key = get_env_var("DEFECTDOJO_API_KEY")
         self.defectdojo_username = get_env_var("DEFECTDOJO_USERNAME")
         self.defectdojo_password = get_env_var("DEFECTDOJO_PASSWORD")
-        self.defectdojo_service_account = get_env_var("DEFECTDOJO_SERVICE_ACCOUNT")
+        self.defectdojo_iap_token = get_env_var("DEFECTDOJO_IAP_TOKEN")
 
         # Required Defectdojo Variables.
         self.defectdojo_url = get_env_var("DEFECTDOJO_URL")
@@ -38,7 +38,10 @@ class Defectdojo:
     ) -> int:
 
         api_endpoint = f"{self.defectdojo_url}/api/v2/import-scan/"
-        headers = {"Authorization": f"Token {self.defectdojo_api_key}"}
+        headers = {
+            "Authorization": f"Token {self.defectdojo_api_key}"
+            "Proxy-Authorization": f"Bearer {self.defectdojo_iap_token}"
+            }
         data = {
             "product_type_name": self.defectdojo_product_type,
             "product_name": self.defectdojo_product,

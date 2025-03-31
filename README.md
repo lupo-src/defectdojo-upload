@@ -11,13 +11,13 @@ alvacoder/defectdojo-upload@v1.0.0
 
 ## Inputs
 
-NB: The defectdojo_username and defectdojo_password should be passed if you are using basic authentication, and if you are using API key authentication, then you should pass in the defectdojo_api_key.
+NB: The defectdojo_username and defectdojo_password should be passed if you are using basic authentication, and if you are using API key authentication, then you should pass in the defectdojo_api_key. Ensure to add defectdojo_iap_token, only if defectdojo was deployed behind an IAP (Identity Aware Proxy)
 
 | Input Name                   | Required |
 | ---------------------------- | -------- | 
 | defectdojo_username          | False     |
 | defectdojo_password          | False     |
-| defectdojo_service_account   | False     |
+| defectdojo_iap_token         | False     |
 | defectdojo_api_key           | False     |
 | defectdojo_url               | True     |
 | defectdojo_product_type      | True     |
