@@ -17,6 +17,9 @@ inputs:
   defectdojo_api_key:
     description: the API key to authenticate with your defectdojo instance if using API key authentication
     required: false
+  defectdojo_iap_token:
+    description: Only required if defectdojo is behind an IAP
+    required: false
   defectdojo_product_type:
     description: the defectdojo product type that the scan result relates to
     required: true
@@ -50,6 +53,7 @@ runs:
   image: 'Dockerfile'
   env:
     DEFECTDOJO_API_KEY: ${{ inputs.defectdojo_api_key }}
+    DEFECTDOJO_IAP_TOKEN: ${{ inputs.defectdojo_iap_token }}
     DEFECTDOJO_USERNAME: ${{ inputs.defectdojo_username }}
     DEFECTDOJO_PASSWORD: ${{ inputs.defectdojo_password }}
     DEFECTDOJO_SERVICE_ACCOUNT: ${{ inputs.defectdojo_service_account }}
