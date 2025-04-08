@@ -39,7 +39,7 @@ class Defectdojo:
 
         api_endpoint = f"{self.defectdojo_url}/api/v2/import-scan/"
         headers = {
-            "Authorization": f"Token {self.defectdojo_api_key}"
+            "Authorization": f"Token {self.defectdojo_api_key}",
             "Proxy-Authorization": f"Bearer {self.defectdojo_iap_token}"
             }
         data = {
