@@ -51,7 +51,7 @@ class Defectdojo:
             "scan_type": self.defectdojo_scan_type,
             "engagement_name": self.defectdojo_engagement_name,
             "auto_create_context": True,
-            "deduplication_on_engagement": True
+            "deduplication_on_engagement": True,
             "close_old_findings": True,
             "verified": False,
         }
