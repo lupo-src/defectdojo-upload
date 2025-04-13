@@ -1,8 +1,8 @@
-"""
+""""
  * @author Idris Adeniji (alvacoder)
  * @email idrisadeniji01@gmail.com
  * @create date 2025-03-18 22:01:56
-"""
+""""
 
 import requests
 import os
