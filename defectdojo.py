@@ -28,6 +28,8 @@ class Defectdojo:
         self.defectdojo_environment_type = get_env_var("DEFECTDOJO_ENVIRONMENT_TYPE")
         self.defectdojo_scan_type = get_env_var("DEFECTDOJO_SCAN_TYPE")
         self.defectdojo_engagement_name = get_env_var("DEFECTDOJO_ENGAGEMENT_NAME")
+        self.defectdojo_engagement_name = get_env_var("DEFECTDOJO_ENGAGEMENT_NAME")
+        self.defectdojo_engagement_name = get_env_var("DEFECTDOJO_ENGAGEMENT_NAME")
         self.scan_results_file_path = get_env_var("RESULTS_FILE_PATH")
 
     def import_scan_results_to_defectdojo(
@@ -49,6 +51,7 @@ class Defectdojo:
             "scan_type": self.defectdojo_scan_type,
             "engagement_name": self.defectdojo_engagement_name,
             "auto_create_context": True,
+            "deduplication_on_engagement": True
             "close_old_findings": True,
             "verified": False,
         }
