@@ -67,7 +67,7 @@ class Defectdojo:
                         data=data,
                         verify=True,
                         cert=(client_certificate_file_path, client_key_file_path),
-                        timeout=self.defectdojo_timeout 
+                        timeout=int(self.defectdojo_timeout)
                     )
                 else:
                     r = requests.post(
@@ -76,7 +76,7 @@ class Defectdojo:
                         files=files,
                         data=data,
                         verify=True,
-                        timeout=self.defectdojo_timeout 
+                        timeout=int(self.defectdojo_timeout)
                     )
 
                 if r.status_code == 201:
