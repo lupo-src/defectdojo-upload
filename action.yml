@@ -44,6 +44,10 @@ inputs:
   client_key_file-path:
     description: the file path for a client side private key if required
     required: false
+  upload_timeout:
+    description: timeout for the upload request
+    required: false
+    default: 300
 # outputs:
     # defectdojo-report-id:
     # description: the id of the defectdojo report that was created
@@ -64,3 +68,4 @@ runs:
     DEFECTDOJO_SCAN_TYPE: ${{ inputs.defectdojo_scan_type }}
     DEFECTDOJO_ENGAGEMENT_NAME: ${{ inputs.defectdojo_engagement_name }}
     RESULTS_FILE_PATH: ${{ inputs.scan_results_file_name }}
+    DEFECTDOJO_UPLOAD_TIMEOUT: ${{ inputs.upload_timeout }}
